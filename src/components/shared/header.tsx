@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { useLanguage } from '@/context/LanguageContext';
+import { Check, HeartPulse, Languages } from 'lucide-react';
 
 export default function Header() {
   const { language, setLanguage, t } = useLanguage();
@@ -16,7 +17,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-red-600 rounded-md flex items-center justify-center">
-              <span className="text-white font-bold text-sm">HF</span>
+              <HeartPulse className="w-4 h-4 text-white" />
             </div>
             <span className="text-xl font-bold text-gray-900">
               Hope<span className="text-red-600">Flow</span>
@@ -55,16 +56,19 @@ export default function Header() {
           <div className="flex items-center space-x-4" suppressHydrationWarning>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="outline" size="sm">
-                  {language === 'en' ? '🇺🇸 EN' : '🇰🇭 KH'}
+                <Button variant="outline" size="sm" className="gap-2">
+                  <Languages className="w-4 h-4" />
+                  {language.toUpperCase()}
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent>
-                <DropdownMenuItem onClick={() => setLanguage('en')}>
-                  🇺🇸 English
+                <DropdownMenuItem onClick={() => setLanguage('en')} className="gap-2">
+                  {language === 'en' ? <Check className="w-4 h-4" /> : <span className="w-4 h-4" />}
+                  English
                 </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => setLanguage('kh')}>
-                  🇰🇭 Khmer
+                <DropdownMenuItem onClick={() => setLanguage('kh')} className="gap-2">
+                  {language === 'kh' ? <Check className="w-4 h-4" /> : <span className="w-4 h-4" />}
+                  Khmer
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
