@@ -9,7 +9,7 @@ interface HeroProps {
 }
 
 export const Hero: React.FC<HeroProps> = ({
-  backgroundImage = '/images/hero-background.jpg',
+  backgroundImage = 'https://imgs.search.brave.com/Zvx0rfo0wIKAZnsQeaEBLmRlIL5jnK5gKrUx4DMGKwU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/dmlzaXQtYW5na29y/Lm9yZy93cC1jb250/ZW50L3VwbG9hZHMv/MjAyMi8xMC9waG5v/bS1iYWtoZW5nLXZp/ZXctYW5na29yLXdh/dC1mb3RvLXNvay1r/YWthZGEuanBn',
 }) => {
   const { t } = useLanguage();
 
