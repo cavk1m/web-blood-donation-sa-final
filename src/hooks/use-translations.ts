@@ -6,9 +6,8 @@ import { getTranslation } from '@/lib/i18n'
 export const useTranslations = () => {
   const language = useLanguageStore((state) => state.language);
   const setLanguage = useLanguageStore((state) => state.setLanguage);
-  const isHydrated = useLanguageStore((state) => state.isHydrated);
 
   const t = (key: string) => getTranslation(language, key)
 
-  return { language, setLanguage, t, isHydrated }
+  return { language, setLanguage, t }
 }
