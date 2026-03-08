@@ -1,19 +1,13 @@
-'use client';
+'use client'
 
-import { useState, useEffect } from 'react';
-import { getTranslation, type Language, defaultLanguage } from '@/lib/i18n';
+import { useLanguageStore } from '@/store/language-store';
+import { getTranslation } from '@/lib/i18n'
 
-export const useTranslations = (initialLanguage: Language = defaultLanguage) => {
-  const [language, setLanguage] = useState<Language>(initialLanguage);
-  const [translation, setTranslation] = useState(getTranslation(language));
+export const useTranslations = () => {
+  const language = useLanguageStore((state) => state.language);
+  const setLanguage = useLanguageStore((state) => state.setLanguage);
 
-  useEffect(() => {
-    setTranslation(getTranslation(language));
-  }, [language]);
+  const t = (key: string) => getTranslation(language, key)
 
-  return {
-    translation,
-    language,
-    setLanguage,
-  };
-};
+  return { language, setLanguage, t }
+}

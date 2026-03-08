@@ -1,15 +1,15 @@
-import en from '@/i18n/en.json';
-import kh from '@/i18n/kh.json';
+import en from '@/i18n/en.json'
+import kh from '@/i18n/kh.json'
 
-export type Language = 'en' | 'kh';
+export type Language = 'en' | 'kh'
 
-const translations: Record<Language, typeof en> = {
-  en,
-  kh,
-};
+export const translations = { en, kh }
 
-export const getTranslation = (language: Language = 'en') => {
-  return translations[language] || translations.en;
-};
-
-export const defaultLanguage: Language = 'en';
+export const getTranslation = (lang: Language, key: string) => {
+  const keys = key.split('.')
+  let value: any = translations[lang]
+  for (const k of keys) {
+    value = value?.[k]
+  }
+  return value || key
+}

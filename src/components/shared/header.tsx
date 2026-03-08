@@ -1,10 +1,14 @@
-'use client';
+'use client'
 
 import React from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
+import { useTranslations } from '@/hooks/use-translations';
 
-export const Header: React.FC = () => {
+export default function Header() {
+  const { language, setLanguage } = useTranslations();
+
   return (
     <header className="bg-white border-b border-gray-200 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -47,10 +51,27 @@ export const Header: React.FC = () => {
             </Link>
           </nav>
 
-          {/* Register Button */}
-          <Button className="bg-red-600 hover:bg-red-700 text-white rounded-full px-6">
-            Register Now
-          </Button>
+          {/* Language Switch and Register Button */}
+          <div className="flex items-center space-x-4">
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="outline" size="sm">
+                  {language === 'en' ? '🇺🇸 EN' : '🇰🇭 KH'}
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent>
+                <DropdownMenuItem onClick={() => setLanguage('en')}>
+                  🇺🇸 English
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => setLanguage('kh')}>
+                  🇰🇭 Khmer
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+            <Button className="bg-red-600 hover:bg-red-700 text-white rounded-full px-6">
+              Register Now
+            </Button>
+          </div>
         </div>
       </div>
     </header>
