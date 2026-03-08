@@ -4,13 +4,13 @@ import React from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
-import { useTranslations } from '@/hooks/use-translations';
+import { useLanguage } from '@/context/LanguageContext';
 
 export default function Header() {
-  const { language, setLanguage } = useTranslations();
+  const { language, setLanguage, t } = useLanguage();
 
   return (
-    <header className="bg-white border-b border-gray-200 shadow-sm">
+    <header className="bg-white border-b border-gray-200 shadow-sm sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -29,30 +29,30 @@ export default function Header() {
               href="/"
               className="text-gray-700 hover:text-red-600 transition-colors font-medium"
             >
-              Home
+              {t('header.home')}
             </Link>
             <Link
               href="/locations"
               className="text-gray-700 hover:text-red-600 transition-colors font-medium"
             >
-              Locations
+              {t('header.locations')}
             </Link>
             <Link
               href="/campaigns"
               className="text-gray-700 hover:text-red-600 transition-colors font-medium"
             >
-              Campaigns
+              {t('header.campaigns')}
             </Link>
             <Link
               href="/donate"
               className="text-gray-700 hover:text-red-600 transition-colors font-medium"
             >
-              Donate
+              {t('header.donate')}
             </Link>
           </nav>
 
           {/* Language Switch and Register Button */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-4" suppressHydrationWarning>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="outline" size="sm">
@@ -69,7 +69,7 @@ export default function Header() {
               </DropdownMenuContent>
             </DropdownMenu>
             <Button className="bg-red-600 hover:bg-red-700 text-white rounded-full px-6">
-              Register Now
+              {t('header.register')}
             </Button>
           </div>
         </div>
