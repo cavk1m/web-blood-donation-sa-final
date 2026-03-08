@@ -1,11 +1,14 @@
-import { createForm } from '@tanstack/react-form';
+// Sample TanStack Form configuration
+// Documentation: https://tanstack.com/form
 
-export const sampleForm = createForm({
+export interface SampleFormData {
+  name: string;
+  email: string;
+}
+
+export const sampleFormSchema = {
   defaultValues: {
     name: '',
     email: '',
-  },
-  onSubmit: ({ value }) => {
-    console.log('Form submitted:', value);
-  },
-});
+  } as SampleFormData,
+};
