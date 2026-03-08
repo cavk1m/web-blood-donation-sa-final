@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { useTranslations } from '@/hooks/use-translations';
 
@@ -11,7 +11,16 @@ interface HeroProps {
 export const Hero: React.FC<HeroProps> = ({
   backgroundImage = '/images/hero-background.jpg',
 }) => {
-  const { language, setLanguage, t } = useTranslations();
+  const { t, isHydrated } = useTranslations();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted || !isHydrated) {
+    return null;
+  }
 
   return (
     <div
@@ -20,30 +29,6 @@ export const Hero: React.FC<HeroProps> = ({
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('${backgroundImage}')`,
       }}
     >
-      {/* Language Switcher */}
-      <div className="absolute top-24 right-8 flex gap-2">
-        <button
-          onClick={() => setLanguage('en')}
-          className={`px-4 py-2 rounded-lg font-semibold transition-all ${
-            language === 'en'
-              ? 'bg-red-600 text-white'
-              : 'bg-white text-red-600 hover:bg-gray-100'
-          }`}
-        >
-          EN
-        </button>
-        <button
-          onClick={() => setLanguage('kh')}
-          className={`px-4 py-2 rounded-lg font-semibold transition-all ${
-            language === 'kh'
-              ? 'bg-red-600 text-white'
-              : 'bg-white text-red-600 hover:bg-gray-100'
-          }`}
-        >
-          KH
-        </button>
-      </div>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="max-w-2xl">
           {/* Badge */}
