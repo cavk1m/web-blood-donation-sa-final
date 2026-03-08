@@ -2,8 +2,10 @@
 
 import React from 'react';
 import Link from 'next/link';
+import { useTranslations } from '@/hooks/use-translations';
 
 export const Footer: React.FC = () => {
+  const { t } = useTranslations();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -22,20 +24,20 @@ export const Footer: React.FC = () => {
               </span>
             </div>
             <p className="text-gray-400 text-sm">
-              Saving lives through blood donation. Join our mission to help those in need.
+              {t('footer.description')}
             </p>
           </div>
 
           {/* Quick Links */}
           <div className="col-span-1">
-            <h3 className="text-white font-semibold mb-4">Quick Links</h3>
+            <h3 className="text-white font-semibold mb-4">{t('footer.quickLinks')}</h3>
             <ul className="space-y-2">
               <li>
                 <Link
                   href="/"
                   className="text-gray-400 hover:text-red-600 transition-colors text-sm"
                 >
-                  Home
+                  {t('header.home')}
                 </Link>
               </li>
               <li>
@@ -43,7 +45,7 @@ export const Footer: React.FC = () => {
                   href="/locations"
                   className="text-gray-400 hover:text-red-600 transition-colors text-sm"
                 >
-                  Locations
+                  {t('header.locations')}
                 </Link>
               </li>
               <li>
@@ -51,7 +53,7 @@ export const Footer: React.FC = () => {
                   href="/campaigns"
                   className="text-gray-400 hover:text-red-600 transition-colors text-sm"
                 >
-                  Campaigns
+                  {t('header.campaigns')}
                 </Link>
               </li>
               <li>
@@ -59,7 +61,7 @@ export const Footer: React.FC = () => {
                   href="/donate"
                   className="text-gray-400 hover:text-red-600 transition-colors text-sm"
                 >
-                  Donate
+                  {t('header.donate')}
                 </Link>
               </li>
             </ul>
@@ -67,14 +69,14 @@ export const Footer: React.FC = () => {
 
           {/* Information */}
           <div className="col-span-1">
-            <h3 className="text-white font-semibold mb-4">Information</h3>
+            <h3 className="text-white font-semibold mb-4">{t('footer.information')}</h3>
             <ul className="space-y-2">
               <li>
                 <Link
                   href="/about"
                   className="text-gray-400 hover:text-red-600 transition-colors text-sm"
                 >
-                  About Us
+                  {t('footer.aboutUs')}
                 </Link>
               </li>
               <li>
@@ -82,7 +84,7 @@ export const Footer: React.FC = () => {
                   href="/contact"
                   className="text-gray-400 hover:text-red-600 transition-colors text-sm"
                 >
-                  Contact
+                  {t('footer.contact')}
                 </Link>
               </li>
               <li>
@@ -90,7 +92,7 @@ export const Footer: React.FC = () => {
                   href="/privacy"
                   className="text-gray-400 hover:text-red-600 transition-colors text-sm"
                 >
-                  Privacy Policy
+                  {t('footer.privacyPolicy')}
                 </Link>
               </li>
               <li>
@@ -98,7 +100,7 @@ export const Footer: React.FC = () => {
                   href="/terms"
                   className="text-gray-400 hover:text-red-600 transition-colors text-sm"
                 >
-                  Terms & Conditions
+                  {t('footer.termsConditions')}
                 </Link>
               </li>
             </ul>
@@ -106,10 +108,10 @@ export const Footer: React.FC = () => {
 
           {/* Contact & Social */}
           <div className="col-span-1">
-            <h3 className="text-white font-semibold mb-4">Contact</h3>
+            <h3 className="text-white font-semibold mb-4">{t('footer.contact')}</h3>
             <ul className="space-y-2 text-sm">
               <li className="text-gray-400">
-                Email:{' '}
+                {t('footer.email')}:{' '}
                 <a
                   href="mailto:info@hopeflow.com"
                   className="hover:text-red-600 transition-colors"
@@ -118,7 +120,7 @@ export const Footer: React.FC = () => {
                 </a>
               </li>
               <li className="text-gray-400">
-                Phone:{' '}
+                {t('footer.phone')}:{' '}
                 <a
                   href="tel:+1234567890"
                   className="hover:text-red-600 transition-colors"
@@ -126,7 +128,7 @@ export const Footer: React.FC = () => {
                   +1 (234) 567-890
                 </a>
               </li>
-              <li className="text-gray-400">Follow us on social media</li>
+              <li className="text-gray-400">{t('footer.followUs')}</li>
               <li className="flex space-x-4 pt-2">
                 <a
                   href="#"
@@ -160,10 +162,10 @@ export const Footer: React.FC = () => {
         {/* Bottom Footer */}
         <div className="py-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            &copy; {currentYear} HopeFlow. All rights reserved.
+            &copy; {currentYear} HopeFlow. {t('footer.copyright')}
           </p>
           <p className="text-gray-400 text-sm mt-4 md:mt-0">
-            Made with <span className="text-red-600">❤</span> for life-saving donations
+            {t('footer.madeWith')}
           </p>
         </div>
       </div>

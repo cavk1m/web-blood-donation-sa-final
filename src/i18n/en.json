@@ -8,5 +8,26 @@
     "buttonDonate": "Donate Blood",
     "buttonSupport": "Support Us",
     "buttonFind": "Find Blood Banks"
+  },
+  "header": {
+    "home": "Home",
+    "locations": "Locations",
+    "campaigns": "Campaigns",
+    "donate": "Donate",
+    "register": "Register Now"
+  },
+  "footer": {
+    "description": "Saving lives through blood donation. Join our mission to help those in need.",
+    "quickLinks": "Quick Links",
+    "information": "Information",
+    "aboutUs": "About Us",
+    "contact": "Contact",
+    "privacyPolicy": "Privacy Policy",
+    "termsConditions": "Terms & Conditions",
+    "email": "Email",
+    "phone": "Phone",
+    "followUs": "Follow us on social media",
+    "copyright": "All rights reserved.",
+    "madeWith": "Made with ❤ for life-saving donations"
   }
 }
