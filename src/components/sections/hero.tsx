@@ -1,8 +1,8 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Button } from '@/components/ui/button';
-import { useTranslations } from '@/hooks/use-translations';
+import { useLanguage } from '@/context/LanguageContext';
 
 interface HeroProps {
   backgroundImage?: string;
@@ -11,16 +11,7 @@ interface HeroProps {
 export const Hero: React.FC<HeroProps> = ({
   backgroundImage = '/images/hero-background.jpg',
 }) => {
-  const { t, isHydrated } = useTranslations();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted || !isHydrated) {
-    return null;
-  }
+  const { t } = useLanguage();
 
   return (
     <div

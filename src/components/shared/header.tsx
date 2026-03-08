@@ -4,10 +4,10 @@ import React from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
-import { useTranslations } from '@/hooks/use-translations';
+import { useLanguage } from '@/context/LanguageContext';
 
 export default function Header() {
-  const { language, setLanguage, t, isHydrated } = useTranslations();
+  const { language, setLanguage, t } = useLanguage();
 
   return (
     <header className="bg-white border-b border-gray-200 shadow-sm sticky top-0 z-50">
@@ -52,28 +52,22 @@ export default function Header() {
           </nav>
 
           {/* Language Switch and Register Button */}
-          <div className="flex items-center space-x-4">
-            {isHydrated ? (
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <Button variant="outline" size="sm">
-                    {language === 'en' ? '🇺🇸 EN' : '🇰🇭 KH'}
-                  </Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent>
-                  <DropdownMenuItem onClick={() => setLanguage('en')}>
-                    🇺🇸 English
-                  </DropdownMenuItem>
-                  <DropdownMenuItem onClick={() => setLanguage('kh')}>
-                    🇰🇭 Khmer
-                  </DropdownMenuItem>
-                </DropdownMenuContent>
-              </DropdownMenu>
-            ) : (
-              <Button variant="outline" size="sm" disabled>
-                🇺🇸 EN
-              </Button>
-            )}
+          <div className="flex items-center space-x-4" suppressHydrationWarning>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="outline" size="sm">
+                  {language === 'en' ? '🇺🇸 EN' : '🇰🇭 KH'}
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent>
+                <DropdownMenuItem onClick={() => setLanguage('en')}>
+                  🇺🇸 English
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => setLanguage('kh')}>
+                  🇰🇭 Khmer
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
             <Button className="bg-red-600 hover:bg-red-700 text-white rounded-full px-6">
               {t('header.register')}
             </Button>

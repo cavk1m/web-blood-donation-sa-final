@@ -1,21 +1,12 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
-import { useTranslations } from '@/hooks/use-translations';
+import { useLanguage } from '@/context/LanguageContext';
 
 export const Footer: React.FC = () => {
-  const { t, isHydrated } = useTranslations();
-  const [mounted, setMounted] = useState(false);
+  const { t } = useLanguage();
   const currentYear = new Date().getFullYear();
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted || !isHydrated) {
-    return null;
-  }
 
   return (
     <footer className="bg-gray-900 text-gray-300 mt-16">
