@@ -1,7 +1,19 @@
-import { useLanguageStore } from '@/store/language-store';
-import { translations } from '@/constants/translations';
+'use client';
 
-export const useTranslations = () => {
-  const language = useLanguageStore((state) => state.language);
-  return translations[language];
+import { useState, useEffect } from 'react';
+import { getTranslation, type Language, defaultLanguage } from '@/lib/i18n';
+
+export const useTranslations = (initialLanguage: Language = defaultLanguage) => {
+  const [language, setLanguage] = useState<Language>(initialLanguage);
+  const [translation, setTranslation] = useState(getTranslation(language));
+
+  useEffect(() => {
+    setTranslation(getTranslation(language));
+  }, [language]);
+
+  return {
+    translation,
+    language,
+    setLanguage,
+  };
 };
