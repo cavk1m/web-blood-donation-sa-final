@@ -11,8 +11,17 @@ interface HeroProps {
 export const Hero: React.FC<HeroProps> = ({
   backgroundImage = '/images/hero-background.jpg',
 }) => {
-  const t = useTranslations();
-  const hero = t.hero;
+  const { t } = useTranslations();
+  const hero = {
+    badge: t('hero.badge'),
+    title1: t('hero.title1'),
+    title2: t('hero.title2'),
+    title3: t('hero.title3'),
+    description: t('hero.description'),
+    buttonDonate: t('hero.buttonDonate'),
+    buttonSupport: t('hero.buttonSupport'),
+    buttonFind: t('hero.buttonFind'),
+  };
 
   return (
     <div
