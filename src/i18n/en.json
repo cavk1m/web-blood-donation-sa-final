@@ -4,27 +4,30 @@
     "title1": "Give Blood.",
     "title2": "Give Hope.",
     "title3": "Save Lives.",
-    "description": "HopeFlow connects blood donors, charity volunteers, and aid recipients during emergencies. Register online, receive your queue number, and skip the wait at donation centers.",
+    "description": "HopeFlow connects blood donors, charity volunteers, and aid recipients during emergencies. Register online, receive your q-card, and help save lives in your community.",
     "buttonDonate": "Donate Blood",
-    "buttonSupport": "Support Campaign",
-    "buttonFind": "Find Centers"
+    "buttonSupport": "Support Us",
+    "buttonFind": "Find Blood Banks"
   },
   "header": {
     "home": "Home",
     "locations": "Locations",
     "campaigns": "Campaigns",
     "donate": "Donate",
-    "registerNow": "Register Now"
+    "register": "Register Now"
   },
   "footer": {
-    "about": "About Us",
+    "description": "Saving lives through blood donation. Join our mission to help those in need.",
+    "quickLinks": "Quick Links",
+    "information": "Information",
+    "aboutUs": "About Us",
     "contact": "Contact",
-    "privacy": "Privacy Policy",
-    "terms": "Terms & Conditions",
+    "privacyPolicy": "Privacy Policy",
+    "termsConditions": "Terms & Conditions",
     "email": "Email",
     "phone": "Phone",
     "followUs": "Follow us on social media",
-    "copyright": "All rights reserved",
-    "madeWith": "Made with"
+    "copyright": "All rights reserved.",
+    "madeWith": "Made with ❤ for life-saving donations"
   }
 }
