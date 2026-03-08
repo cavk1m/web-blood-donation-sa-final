@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { useLanguage } from '@/context/LanguageContext';
+import { Facebook, HeartPulse, Instagram, Twitter } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   const { t } = useLanguage();
@@ -17,7 +18,7 @@ export const Footer: React.FC = () => {
           <div className="col-span-1">
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-8 h-8 bg-red-600 rounded-md flex items-center justify-center">
-                <span className="text-white font-bold text-sm">HF</span>
+                <HeartPulse className="w-4 h-4 text-white" />
               </div>
               <span className="text-xl font-bold text-white">
                 Hope<span className="text-red-600">Flow</span>
@@ -135,21 +136,21 @@ export const Footer: React.FC = () => {
                   className="text-gray-400 hover:text-red-600 transition-colors"
                   aria-label="Facebook"
                 >
-                  <span className="text-lg">f</span>
+                  <Facebook className="w-5 h-5" />
                 </a>
                 <a
                   href="#"
                   className="text-gray-400 hover:text-red-600 transition-colors"
                   aria-label="Twitter"
                 >
-                  <span className="text-lg">𝕏</span>
+                  <Twitter className="w-5 h-5" />
                 </a>
                 <a
                   href="#"
                   className="text-gray-400 hover:text-red-600 transition-colors"
                   aria-label="Instagram"
                 >
-                  <span className="text-lg">📷</span>
+                  <Instagram className="w-5 h-5" />
                 </a>
               </li>
             </ul>

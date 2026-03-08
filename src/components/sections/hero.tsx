@@ -3,6 +3,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/context/LanguageContext';
+import { HandHeart, MapPin, Syringe } from 'lucide-react';
 
 interface HeroProps {
   backgroundImage?: string;
@@ -41,21 +42,24 @@ export const Hero: React.FC<HeroProps> = ({
           </p>
 
           {/* Buttons */}
-          <div className="flex flex-wrap gap-4">
-            <Button className="bg-red-600 hover:bg-red-700 text-white rounded-full px-8 py-3 font-semibold">
-              💉 {t('hero.buttonDonate')}
+          <div className="flex flex-wrap items-center gap-4">
+            <Button className="h-12 rounded-full px-7 bg-white text-red-600 hover:bg-gray-100 font-semibold gap-2 shadow-sm">
+              <Syringe className="w-4 h-4 text-red-500" />
+              {t('hero.buttonDonate')}
             </Button>
             <Button
               variant="outline"
-              className="border-2 border-white text-white rounded-full px-8 py-3 font-semibold hover:bg-white hover:text-red-600 transition-colors"
+              className="h-12 rounded-full px-7 border border-white/40 bg-black/25 text-white font-semibold hover:bg-black/35 hover:text-white transition-colors gap-2 backdrop-blur-sm"
             >
-              ❤️ {t('hero.buttonSupport')}
+              <HandHeart className="w-4 h-4 text-pink-400" />
+              {t('hero.buttonSupport')}
             </Button>
             <Button
               variant="outline"
-              className="border-2 border-white text-white rounded-full px-8 py-3 font-semibold hover:bg-white hover:text-red-600 transition-colors"
+              className="h-12 rounded-full px-7 border border-white/40 bg-black/25 text-white font-semibold hover:bg-black/35 hover:text-white transition-colors gap-2 backdrop-blur-sm"
             >
-              📍 {t('hero.buttonFind')}
+              <MapPin className="w-4 h-4 text-pink-400" />
+              {t('hero.buttonFind')}
             </Button>
           </div>
         </div>
