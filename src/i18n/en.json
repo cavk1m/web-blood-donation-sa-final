@@ -1,0 +1,30 @@
+{
+  "hero": {
+    "badge": "Emergency Response Active in 3 Regions",
+    "title1": "Give Blood.",
+    "title2": "Give Hope.",
+    "title3": "Save Lives.",
+    "description": "HopeFlow connects blood donors, charity volunteers, and aid recipients during emergencies. Register online, receive your queue number, and skip the wait at donation centers.",
+    "buttonDonate": "Donate Blood",
+    "buttonSupport": "Support Campaign",
+    "buttonFind": "Find Centers"
+  },
+  "header": {
+    "home": "Home",
+    "locations": "Locations",
+    "campaigns": "Campaigns",
+    "donate": "Donate",
+    "registerNow": "Register Now"
+  },
+  "footer": {
+    "about": "About Us",
+    "contact": "Contact",
+    "privacy": "Privacy Policy",
+    "terms": "Terms & Conditions",
+    "email": "Email",
+    "phone": "Phone",
+    "followUs": "Follow us on social media",
+    "copyright": "All rights reserved",
+    "madeWith": "Made with"
+  }
+}
