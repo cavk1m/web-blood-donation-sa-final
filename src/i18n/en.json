@@ -29,5 +29,28 @@
     "followUs": "Follow us on social media",
     "copyright": "All rights reserved.",
     "madeWith": "Made with ❤ for life-saving donations"
+  },
+  "simpleProcess": {
+    "badge": "Simple Process",
+    "title": "How HopeFlow Works",
+    "description": "We've streamlined the donation process so you can help faster with less hassle — no long queues, no confusion.",
+    "steps": {
+      "step1": {
+        "title": "Register Online",
+        "description": "Fill in your details and complete a quick health survey from the comfort of your home."
+      },
+      "step2": {
+        "title": "Receive Queue Number",
+        "description": "Get a unique queue number sent directly to your email — no app required."
+      },
+      "step3": {
+        "title": "Visit the Center",
+        "description": "Arrive at your chosen donation center at your scheduled time — no waiting in line."
+      },
+      "step4": {
+        "title": "Make Your Impact",
+        "description": "Your donation is processed and reaches those in need within hours of your visit."
+      }
+    }
   }
 }
