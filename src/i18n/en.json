@@ -30,44 +30,26 @@
     "copyright": "All rights reserved.",
     "madeWith": "Made with ❤ for life-saving donations"
   },
-  "emergency": {
-    "alert": {
-      "title": "Critical Blood Shortage — Type O- Urgently Needed",
-      "description": "Eastern Province hospitals are facing severe shortages. Eligible donors are needed immediately.",
-      "button": "Register as Donor"
-    },
-    "active": "Active Now",
-    "heading": "Emergency Campaigns",
-    "subheading": "Your contribution — whether blood funds, food, or time — makes a direct impact on communities in crisis.",
-    "tags": {
-      "urgent": "Urgent",
-      "food": "Food Drive",
-      "medical": "Medical"
-    },
-    "cards": {
-      "blood": {
-        "title": "Blood Drive — Eastern Province Crisis Response",
-        "subtitle": "Currently in surgery or ICU care.",
-        "current": "1,240 donors",
-        "goal": "Goal: 2,000",
-        "primary": "Donate Blood",
-        "secondary": "Fund Campaign"
+  "simpleProcess": {
+    "badge": "Simple Process",
+    "title": "How HopeFlow Works",
+    "description": "We've streamlined the donation process so you can help faster with less hassle — no long queues, no confusion.",
+    "steps": {
+      "step1": {
+        "title": "Register Online",
+        "description": "Fill in your details and complete a quick health survey from the comfort of your home."
       },
-      "food": {
-        "title": "Flood Relief — Emergency Food & Clothing Drive",
-        "subtitle": "Families are displaced following the southern floods.",
-        "current": "$54,300 raised",
-        "goal": "Goal: $150,000",
-        "primary": "Donate Now",
-        "secondary": "Volunteer"
+      "step2": {
+        "title": "Receive Queue Number",
+        "description": "Get a unique queue number sent directly to your email — no app required."
       },
-      "medical": {
-        "title": "Pediatric Ward Medical Supply Campaign",
-        "subtitle": "Children's hospitals are facing critical shortages.",
-        "current": "$32,100 raised",
-        "goal": "Goal: $60,000",
-        "primary": "Donate Now",
-        "secondary": "Learn More"
+      "step3": {
+        "title": "Visit the Center",
+        "description": "Arrive at your chosen donation center at your scheduled time — no waiting in line."
+      },
+      "step4": {
+        "title": "Make Your Impact",
+        "description": "Your donation is processed and reaches those in need within hours of your visit."
       }
     }
   }
