@@ -29,5 +29,46 @@
     "followUs": "Follow us on social media",
     "copyright": "All rights reserved.",
     "madeWith": "Made with ❤ for life-saving donations"
+  },
+  "emergency": {
+    "alert": {
+      "title": "Critical Blood Shortage — Type O- Urgently Needed",
+      "description": "Eastern Province hospitals are facing severe shortages. Eligible donors are needed immediately.",
+      "button": "Register as Donor"
+    },
+    "active": "Active Now",
+    "heading": "Emergency Campaigns",
+    "subheading": "Your contribution — whether blood funds, food, or time — makes a direct impact on communities in crisis.",
+    "tags": {
+      "urgent": "Urgent",
+      "food": "Food Drive",
+      "medical": "Medical"
+    },
+    "cards": {
+      "blood": {
+        "title": "Blood Drive — Eastern Province Crisis Response",
+        "subtitle": "Currently in surgery or ICU care.",
+        "current": "1,240 donors",
+        "goal": "Goal: 2,000",
+        "primary": "Donate Blood",
+        "secondary": "Fund Campaign"
+      },
+      "food": {
+        "title": "Flood Relief — Emergency Food & Clothing Drive",
+        "subtitle": "Families are displaced following the southern floods.",
+        "current": "$54,300 raised",
+        "goal": "Goal: $150,000",
+        "primary": "Donate Now",
+        "secondary": "Volunteer"
+      },
+      "medical": {
+        "title": "Pediatric Ward Medical Supply Campaign",
+        "subtitle": "Children's hospitals are facing critical shortages.",
+        "current": "$32,100 raised",
+        "goal": "Goal: $60,000",
+        "primary": "Donate Now",
+        "secondary": "Learn More"
+      }
+    }
   }
 }
